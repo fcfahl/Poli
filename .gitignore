@@ -1,5 +1,20 @@
-# Object file
-*.o
+# Tiff files
+*.tiff
+*.tif
+*.tfw
 
-# Ada Library Information
-*.ali
+# Shape files
+*.shp
+*.dbf
+*.qpj
+*.shx
+*.prj
+
+# Zip files
+*.zip
+
+# folders
+**/02_Data_Sources/**
+**/03_Data_Processing/**
+**/98_Backups
+**/TMP
