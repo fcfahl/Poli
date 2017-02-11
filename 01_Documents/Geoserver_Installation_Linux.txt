@@ -1,0 +1,173 @@
+01 - Install Java:
+
+a - check installation: sudo update-alternatives --config java
+
+output:" update-alternatives: error: no alternatives for java" - Java installation required
+
+b - install java 8:
+
+http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html
+
+
+
+
+02 - Install Tomcat 
+
+a - Download: http://tomcat.apache.org/download-90.cgi
+
+b - Extract and move to /opt: 
+sudo tar xvfz apache-tomcat-9.0.0.M1.tar.gz -C /opt
+
+c - start Tomcat:
+sudo /opt/apache-tomcat-9.0.0.M1/bin/catalina.sh start
+
+if needed to stop it: 
+sudo /opt/apache-tomcat-9.0.0.M1/bin/catalina.sh stop
+
+d - Edit security settings. 
+
+/opt/apache-tomcat-9.0.0.M1/conf/tomcat-users.xml
+/etc/tomcat8/tomcat-users.xml
+
+
+uncomment and edit (include manager-gui) the following section:
+
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <role rolename="manager-gui"/>
+  <user username="tomcat" password="tomcat" roles="tomcat,manager-gui"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+
+
+
+e - Increase the Tomcat Memory 
+
+follow the instructions: 
+http://crunchify.com/how-to-change-jvm-heap-setting-xms-xmx-of-tomcat/
+
+
+
+03 - Install Geoserver
+
+a - Download: http://geoserver.org/release/maintain/
+b - unzip the file
+c - modify the file /usr/share/tomcat8-admin/manager/WEB-INF/web.xml
+
+    <multipart-config>
+      <!-- 50MB max -->
+      <max-file-size>52428800</max-file-size>
+      <max-request-size>52428800</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+
+set the max-file-size and max-request-size to 62914560
+
+restart tomcat
+
+d- Access the tomcat manager page (user:tomcat pwd: tomcat)
+http://localhost:8080/manager/html
+
+e - Deploy the geoserver.war file
+
+f - if successful, geoserver must be running at:
+http://localhost:8080/geoserver/web/ 
+
+g - define the geoserver data directory
+http://docs.geoserver.org/stable/en/user/datadirectory/data-dir-setting.html
+
+g1 -> define bash variable inside home/.bashrc
+
+	export GEOSERVER_DATA_DIR=/...
+
+	export GEOSERVER_DATA_DIR=/home/fcfahl/GIS/07_WebGIS/02_Geoserver_Polimi
+
+g2 -> Modify the Servlet context parameter
+	/var/lib/tomcat8/webapps/geoserver/WEB-INF/web.xml
+
+    <context-param>
+       <param-name>GEOSERVER_DATA_DIR</param-name>
+        <param-value>/home/fcfahl/GIS/03_Data_Processing/02_LULC</param-value>
+    </context-param> 
+
+g3 -> Change group of the data folder to tomcat8
+
+	sudo chgrp tomcat8 /home/fcfahl/GIS/03_Data_Processing/02_LULC
+
+
+h - install ImagePyramid extension
+
+follow instructions: http://docs.geoserver.org/stable/en/user/data/raster/imagepyramid.html
+
+
+
+
+
+04 - Install PostGIS
+http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt
+
+create user:
+sudo su - postgres
+createuser -d -E -i -l -P -r -s postgres
+pwd: postgres
+
+if there is a problem to set up the postgres password, see this link
+http://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres
+
+
+
+_____ Rasdaman
+
+sudo apt-get install curl
+sudo apt-get install google-mock
+
+
+1) Install rasdaman first - it will install tomcat7 by default
+
+http://www.rasdaman.org/wiki/InstallFromDEB
+
+from source:
+./configure --prefix="$RMANHOME" --enable-rasnet --with-wardir=/var/lib/tomcat7/webapps/ --prefix=/opt/rasdaman/ --with-netcdf --with-default-basedb=postgresql
+
+
+./configure --prefix="$RMANHOME" --with-wardir=$CATALINA_HOME/webapps/ --with-netcdf  --with-default-basedb=postgresql --with-filedatadir="$RASDATA" --enable-rasnet
+
+
+
+2) Install tomcat8-admin:
+
+sudo apt-get install tomcat8-admin
+3) Modify the tomcat 8 Users:
+
+sudo bluefish /etc/tomcat8/tomcat-users.xml
+
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <role rolename="admin-gui"/>
+  <user username="tomcat" password="tomcat" roles="tomcat,admin-gui"/>
+  <user username="admin-gui" password="tomcat" roles="tomcat,admin-gui"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+
+
+4) Modify the tomcat 8 memory:
+
+/usr/share/tomcat8-admin/manager/WEB-INF/web.xml
+
+ set the max-file-size and max-request-size to 62914560
+
+5) restart tomcat
+sudo service tomcat8 start
+sudo service tomcat8 restart
+
+sudo service tomcat8 status
+
+sudo service rasdaman start
+sudo service rasdaman status
+
+sudo service postgresql status
+
+
+
+6) deploy geoserver war
+

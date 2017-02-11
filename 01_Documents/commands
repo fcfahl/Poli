@@ -1,0 +1,45 @@
+sudo service tomcat7 restart
+
+
+./configure --enable-rasnet --with-wardir=/var/lib/tomcat7/webapps/ --prefix=/opt/rasdaman/ --with-netcdf --with-default-basedb=postgresql.
+
+
+su rasdaman
+
+cd /opt/rasdaman/bin
+
+initdb -D /opt/rasdaman/data
+
+
+pg_ctl  -D /opt/rasdaman/data
+
+
+initdb -D $DATADIR
+
+
+An error has occured while executing this command: ./rasdaman_insertdemo.sh localhost 7001 /opt/rasdaman//share/rasdaman/examples/images rasadmin rasadmin. We collected the following information:
+Return code: 1
+Stderr: E0208 18:58:46.566736272   15963 tcp_client_posix.c:159]     socket error: connection refused
+Exception:  ODMG General
+
+Stdout:rasdaman_insertdemo.sh: rasdaman demo data insert script v2.0
+rasdaman_insertdemo.sh: using host localhost, image directory /opt/rasdaman//share/rasdaman/examples/images, and user/passwd rasadmin/rasadmin
+mr...creating 2D object of extent [0:255,0:210] from /opt/rasdaman//share/rasdaman/examples/images/mr_1.pgm... [INFO] -  do nothing 
+ [INFO] -     Collection object fcfahl-ubuntu|RASBASE|513  
+[E
+ERROR: The installer returned an error code. The installation might not be valid.
+
+
+
+sudo -u rasdaman -i
+
+rasdaman_insertdemo.sh localhost 7001 /opt/rasdaman/share/rasdaman/examples/images/ rasadmin rasadmin
+
+sudo netstat -tulpn | grep 80
+
+rasdaman_insertdemo.sh localhost 7001 /home/fcfahl/GIS/ rasadmin rasadmin
+
+
+
+sass --no-cach --watch scss:css --style compressed
+

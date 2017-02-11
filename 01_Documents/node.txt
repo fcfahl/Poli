@@ -1,0 +1,104 @@
+1 - Install node
+
+sudo apt-get install -y nodejs
+sudo apt install nodejs-legacy
+sudo apt-get install npm
+
+#NODE global modules to use the global node modules instead of the locals
+http://stackoverflow.com/questions/15636367/nodejs-require-a-global-module-package/15646750#15646750
+edit the file: /home/fcfahl/.bashrc
+
+export NODE_PATH=/usr/local/lib/node_modules/
+
+
+2 - Install Gulp
+	http://blog.caelum.com.br/bye-bye-grunt-js-hello-gulp-js/
+
+	#initialize the config (dev) file
+	npm init 
+
+	#--save-dev will add the module to the dev file
+	npm install gulp --save-dev
+	npm install gulp-util --save-dev
+	npm install gulp-uglify --save-dev
+	npm install gulp-watch --save-dev
+	npm install gulp-imagemin --save-dev
+	npm install node-sass --save-dev
+	npm install gulp-sass --save-dev
+	npm install browser-sync --save-dev
+
+	optimize files
+	npm install gulp-useref --save-dev
+	npm install gulp-cssnano --save-dev
+	npm install del --save-dev
+	npm install run-sequence --save-dev
+	npm install gulp-json-srv --save-dev
+	npm install gulp-ruby-sass --save-dev
+
+	alternative --http://code.tutsplus.com/tutorials/gulp-as-a-development-web-server--cms-20903
+	npm install --save-dev gulp-connect
+
+	#install modules automatically
+	cd .. (same folder to the package.json file)
+	npm install --production
+
+
+	sudo gem install 'sass'
+
+3 -  install Bower
+	sudo npm install -g bower
+
+	cd src
+	bower init
+
+	bower install jquery --save
+	bower install fontawesome --save
+	bower install jquery-ui --save
+	bower install leaflet --save
+	bower install openlayers/ol3 --save
+	bower install bootstrap#v4.0.0-alpha.2 --save
+	bower install leaflet-providers --save
+	bower install leaflet-plugins --save
+	bower install tether --save
+
+	#install modules automatically
+	cd src
+	bower install
+
+
+
+
+
+3 - Gulp coursera
+
+ cd E:/12_GitHub/WebGIS_LULC/
+
+npm install jshint gulp-jshint jshint-stylish gulp-imagemin gulp-concat gulp-uglify gulp-clean-css gulp-usemin gulp-cache gulp-changed gulp-rev gulp-rename gulp-notify browser-sync del gulp-sass run-sequence --save-dev
+
+gulp-minify-css
+Deprecation warning: This package has been deprecated. Please use gulp-clean-css instead.
+
+npm install gulp-clean-css --save-dev
+npm install json-server -g
+
+
+
+____
+
+npm install -g npm-check-updates
+
+npm install -g npm-check-updates
+
+
+4 -  Gulp ruby (this is the only way to compile sass with gulp)
+Ruby must be installed
+gem install sass
+
+
+npm install gulp-ruby-sass --save-dev
+
+5 - final
+npm install gulp gulp-ruby-sass jshint gulp-imagemin gulp-cache gulp-jshint jshint-stylish gulp-uglify gulp-cssnano run-sequence gulp-imagemin gulp-usemin gulp-rev gulp-watch browser-sync gulp-clean gulp-connect --save-dev
+
+
+npm install gulp-connect --save-dev

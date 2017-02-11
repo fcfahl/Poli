@@ -1,0 +1,34 @@
+The codename can be got using the following command:
+
+lsb_release -c
+
+The release can be got using the following command:
+
+lsb_release -r
+
+http://trac.osgeo.org/ubuntugis/wiki/SupportedDistributions
+
+
+___________________GIT
+http://rogerdudler.github.io/git-guide/
+
+1) Set up git
+git config --global user.name "fcfahl"
+git config --global user.email "fcfahl@gmx.com"
+
+2) Set up local repository
+git init 07_WebGIS
+cd 07_WebGIS
+git remote add origin https://github.com/fcfahl/WebGIS_LULC.git
+
+3)Clone repo
+git clone https://github.com/fcfahl/WebGIS_LULC.git /home/fcfahl/GIS/07_WebGIS/LULC
+cd LULC
+
+4) Push repo
+git add -A
+git commit -m 'Jade'
+git push origin master
+
+5) Update local repo
+git pull

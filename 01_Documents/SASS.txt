@@ -1,0 +1,75 @@
+1 - Install ATOM
+
+install the binaries:
+
+For x64 - https://atom.io/
+For x32 - http://www.webupd8.org/2014/06/atom-text-editor-available-for-linux.html
+
+2 - Install SASS
+http://sass-lang.com/install
+
+3 - Install NODEJS
+https://nodejs.org/en/download/package-manager/
+
+sudo apt-get install -y nodejs
+sudo apt-get install npm
+
+
+Fix the legacy problems
+http://stackoverflow.com/questions/21168141/cannot-install-packages-using-node-package-manager-in-ubuntu
+
+whereis nodejs
+ln -s /usr/bin/nodejs /usr/bin/node
+
+4 - Install ATOM SASS auto-compile package
+
+https://atom.io/packages/sass-autocompile
+
+5 - Install Bourbon (SASS library)
+http://bourbon.io/
+https://www.youtube.com/watch?v=8ItNE_DX6Cc
+
+sudo gem install 'sass'
+sudo gem install 'bourbon'
+
+run SASS
+sass --watch app.sass:app.css
+
+cd /home/fcfahl/GIS/09_Git/WebGIS_Polimi/css/0_plugins/
+mkdir bourbon/
+
+bourbon install
+
+6 - Install Neat (SASS library)
+http://neat.bourbon.io/
+
+sudo gem install neat
+neat install
+
+
+7 - Install Bitters (SASS library)
+http://bitters.bourbon.io/example.html
+
+sudo gem install bitters
+bitters install
+
+copy the normalize.min.css into a file normalize.scss inside the css folder
+https://cdnjs.com/libraries/normalize
+https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css
+
+8 - Use Refills (SASS library)
+http://refills.bourbon.io/
+
+9 - Install Jade
+http://jade-lang.com/command-line/
+
+sudo npm install jade --global
+
+Install Atom packages:
+
+atom-jade:https://atom.io/packages/atom-jade
+jade-autocompile package
+https://atom.io/packages/autoprefixer
+
+
+
