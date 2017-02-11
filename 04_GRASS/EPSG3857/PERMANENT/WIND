@@ -1,11 +1,11 @@
 proj:       99
 zone:       0
-north:      1
-south:      0
-east:       1
-west:       0
-cols:       1
-rows:       1
+north:      11465936.38192733
+south:      -1.61807267
+east:       7370416.49215067
+west:       -3480828.50784933
+cols:       10851245
+rows:       11465938
 e-w resol:  1
 n-s resol:  1
 top:        1.000000000000000

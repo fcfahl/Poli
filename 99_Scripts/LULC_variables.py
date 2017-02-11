@@ -3,7 +3,7 @@ import os, sys
 
 #_________Check OS
 if sys.platform.startswith('linux'):
-    home = os.getenv("HOME") + '/GIS/'
+    home = os.getenv("HOME") + '/Poli/'
 elif sys.platform.startswith('win'):
     home = 'E:/TEMP/99_Linux/'
 else:
@@ -15,6 +15,8 @@ data_Process =  home + '03_Data_Processing/'
 data_GRASS =  home + '04_GRASS_Database/'
 data_Script =  home + '99_Scripts/'
 data_LULC =  '02_LULC/'
+data_Color =  data_Process + '99_Color_Rules/'
+
 
 MODIS_script_generator = 'https://lpdaac.usgs.gov/data_access/daac2disk'
 Modis_LULC_parameter = 'MCD12Q1'
@@ -85,6 +87,9 @@ class LULC:
         self.resolution = resolution
         self.noData = noData
         self.projection = projection
+        
+        self.color = data_Color + LULC + "_Color.txt"
+        self.cats = data_Color + LULC + "_Cats.txt"
 
         self.list_TMP = [] # variable to hold temporary lists
 

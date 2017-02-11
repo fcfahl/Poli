@@ -16,5 +16,6 @@
 # folders
 **/02_Data_Sources/**
 **/03_Data_Processing/**
+**/04_GRASS/**
 **/98_Backups
 **/TMP
