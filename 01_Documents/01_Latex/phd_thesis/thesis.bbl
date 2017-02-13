@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{a1}
+{Author1, Author2}.
+\newblock Title article 1.
+\newblock {\em Journal}, 1(1):1--10, 1000.
+
+\bibitem{b1}
+{Author1, Author2}.
+\newblock {\em Title Book 1}.
+\newblock Publisher, 1000.
+
+\bibitem{m1}
+{Author1, Author2}.
+\newblock {\em Title Manual 1}.
+\newblock Organization, e.g University, 1000.
+\newblock available online at http://www.microlab-mi.net.
+
+\end{thebibliography}

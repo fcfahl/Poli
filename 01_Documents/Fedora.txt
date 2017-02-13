@@ -1,0 +1,101 @@
+######################### Tomcat
+
+1. Installation:
+
+sudo dnf install tomcat tomcat-admin-webapps
+
+test:
+netstat -nlp | grep 8080
+curl -I http://localhost:8080
+
+
+2. users
+
+cd /etc/tomcat/
+gedit tomcat-users.xml
+
+
+  <role rolename="admin-gui"/>
+  <user username="admin" password="tomcat" roles="admin-gui"/>
+
+  <role rolename="manager-gui"/>
+  <user username="fcfahl" password="tomcat" roles="manager-gui,admin-gui"/>
+
+
+sudo service tomcat restart
+
+3. Increase the Tomcat Memory 
+
+follow the instructions: 
+http://crunchify.com/how-to-change-jvm-heap-setting-xms-xmx-of-tomcat/
+
+cd /usr/share/tomcat/conf/
+gedit 
+
+################ Geoserver
+
+1 - Download: http://geoserver.org/release/maintain/
+2 - Try to deploy the war file using tomcat gui - it will failed
+3  - modify the file /usr/share/tomcat/webapps/manager/WEB-INF/web.xml
+
+    <multipart-config>
+      <!-- 50MB max -->
+      <max-file-size> </max-file-size>
+      <max-request-size>72428800</max-request-size>
+      <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+
+set the max-file-size and max-request-size to 72428800
+
+sudo service tomcat restart
+
+d- Access the tomcat manager page (user:tomcat pwd: tomcat)
+http://localhost:8080/manager/html
+
+
+e - Install plugins
+/usr/share/tomcat/webapps/manager/WEB-INF/lib
+
+
+################ Node
+
+	sudo dnf install nodejs
+	sudo gem install 'sass'
+
+	#install modules automatically
+	cd .. (same folder to the package.json file)
+	npm install
+
+	or manually:
+
+
+	npm install gulp 
+	npm install gulp-cache
+	npm install gulp-ruby-sass
+	npm install gulp-util 
+	npm install gulp-uglify 
+	npm install gulp-watch 
+	npm install gulp-imagemin 
+	npm install gulp-sass 
+	npm install gulp-jshint
+	npm install node-sass 
+	npm install browser-sync 
+
+
+	optimize files
+	npm install gulp-useref 
+	npm install gulp-cssnano 
+	npm install gulp-json-srv 
+	npm install del 
+	npm install run-sequence 
+
+
+	alternative --http://code.tutsplus.com/tutorials/gulp-as-a-development-web-server--cms-20903
+	npm install  gulp-connect
+
+
+
+
+
+
+
