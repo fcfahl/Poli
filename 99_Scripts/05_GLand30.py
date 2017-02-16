@@ -184,8 +184,8 @@ if __name__ == "__main__":
 
 #        decompress_Files(year, df, zones, in_Dir, in_File )
 #        reproject_Zones(year, df, zones, in_Dir, in_File, noData, in_Proj, resolution)
-#        merge_Zones(in_Dir, in_File, out_Dir, noData)
-        retile_Geotiff(in_File, out_Dir)
+        merge_Zones(in_Dir, in_File, out_Dir, noData)
+#        retile_Geotiff(in_File, out_Dir)
 
 
 #        clean_Files(in_Dir)

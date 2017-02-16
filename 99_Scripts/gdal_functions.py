@@ -88,7 +88,7 @@ def clip_File (inFile, outFile, vectorFile, block, compression='', noData='-9999
 
     message ('clip_File ', inFile)
 
-    os.system('gdalwarp -overwrite --config GDAL_CACHEMAX 500 -wm 500 -wo NUM_THREADS=ALL_CPUS -co TILED=YES -co BLOCKXSIZE=%s -co BLOCKYSIZE=%s -co compress=%s -dstnodata %s -crop_to_cutline -cutline %s %s %s ' %(block, block, compression, noData, vectorFile, inFile, outFile))
+    os.system('gdalwarp -overwrite -multi --config GDAL_CACHEMAX 500 -wm 500 -wo NUM_THREADS=ALL_CPUS -co TILED=YES -co BLOCKXSIZE=%s -co BLOCKYSIZE=%s -co compress=%s -dstnodata %s -crop_to_cutline -cutline %s %s %s ' %(block, block, compression, noData, vectorFile, inFile, outFile))
 
 
 def reproject_File (inFile, outFile, inProj, outProj, res, compression=''):

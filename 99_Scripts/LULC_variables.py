@@ -5,7 +5,8 @@ import os, sys
 if sys.platform.startswith('linux'):
     home = os.getenv("HOME") + '/Poli/'
 elif sys.platform.startswith('win'):
-    home = 'E:/TEMP/99_Linux/'
+#    home = 'E:/TEMP/99_Linux/'
+    home = 'C:/data/Poli/'
 else:
     raise OSError('Platform not configured.')
 
