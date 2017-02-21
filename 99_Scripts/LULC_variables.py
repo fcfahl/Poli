@@ -9,7 +9,7 @@ elif sys.platform.startswith('win'):
     home = 'C:/data/Poli/'
 else:
     raise OSError('Platform not configured.')
-
+    
 #_________data location
 data_Source =  home + '02_Data_Sources/'
 data_Process =  home + '03_Data_Processing/'

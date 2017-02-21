@@ -11,8 +11,8 @@ curl -I http://localhost:8080
 
 2. users
 
-cd /etc/tomcat/
-gedit tomcat-users.xml
+cd 
+gedit /etc/tomcat/tomcat-users.xml
 
 
   <role rolename="admin-gui"/>
@@ -21,8 +21,7 @@ gedit tomcat-users.xml
   <role rolename="manager-gui"/>
   <user username="fcfahl" password="tomcat" roles="manager-gui,admin-gui"/>
 
-
-sudo service tomcat restart
+sudo systemctl restart  tomcat.service
 
 3. Increase the Tomcat Memory 
 
@@ -30,7 +29,6 @@ follow the instructions:
 http://crunchify.com/how-to-change-jvm-heap-setting-xms-xmx-of-tomcat/
 
 cd /usr/share/tomcat/conf/
-gedit 
 
 ################ Geoserver
 
@@ -40,14 +38,14 @@ gedit
 
     <multipart-config>
       <!-- 50MB max -->
-      <max-file-size> </max-file-size>
+      <max-file-size>72428800</max-file-size>
       <max-request-size>72428800</max-request-size>
       <file-size-threshold>0</file-size-threshold>
     </multipart-config>
 
 set the max-file-size and max-request-size to 72428800
 
-sudo service tomcat restart
+sudo systemctl restart  tomcat.service
 
 d- Access the tomcat manager page (user:tomcat pwd: tomcat)
 http://localhost:8080/manager/html
@@ -60,40 +58,25 @@ e - Install plugins
 ################ Node
 
 	sudo dnf install nodejs
+	sudo dnf install ruby
 	sudo gem install 'sass'
 
 	#install modules automatically
 	cd .. (same folder to the package.json file)
-	npm install
+	
+	npm install --production
 
-	or manually:
+	and after do manually:
 
+	npm install pug gulp gulp-cli gulp-cache gulp-ruby-sass gulp-util gulp-uglify gulp-watch gulp-imagemin gulp-sass install jshint gulp-jshint jshint-stylish node-sass browser-sync run-sequence gulp-cssnano gulp-connect gulp-usemin  gulp-rev gulp-clean  gulp-data  gulp-jade gulp-merge-json flickrapi 
 
-	npm install gulp 
-	npm install gulp-cache
-	npm install gulp-ruby-sass
-	npm install gulp-util 
-	npm install gulp-uglify 
-	npm install gulp-watch 
-	npm install gulp-imagemin 
-	npm install gulp-sass 
-	npm install gulp-jshint
-	npm install node-sass 
-	npm install browser-sync 
+	sudo npm install -g pug gulp gulp-cli gulp-cache gulp-ruby-sass gulp-util gulp-uglify gulp-watch gulp-imagemin gulp-sass install jshint gulp-jshint jshint-stylish node-sass browser-sync run-sequence gulp-cssnano gulp-connect gulp-usemin  gulp-rev gulp-clean  gulp-data  gulp-jade gulp-merge-json flickrapi 
 
 
-	optimize files
-	npm install gulp-useref 
-	npm install gulp-cssnano 
-	npm install gulp-json-srv 
-	npm install del 
-	npm install run-sequence 
 
+	edit the file: /home/fcfahl/.bash_profile
 
-	alternative --http://code.tutsplus.com/tutorials/gulp-as-a-development-web-server--cms-20903
-	npm install  gulp-connect
-
-
+	export NODE_PATH=/home/fcfahl/WebGIS_LULC/node_modules
 
 
 
