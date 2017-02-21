@@ -20,15 +20,16 @@ def import_LULC (obj):
 def import_MODIS (obj, type): 
     
     inFile = obj.outFileFull + "_Type" + str(type) + "_EPSG3857.tif"
+    outFile = obj.outFile + "_Type" + str(type)
     
     #_________import Raster
-    import_Raster(inFile=inFile, outFile=obj.outFile)  
+    import_Raster(inFile=inFile, outFile=outFile)  
 
     # __________ set colortable
-    do_Colors_Rules (inFile=obj.outFile, rules=obj.color)
+    do_Colors_Rules (inFile=outFile, rules=obj.color)
 
     # __________ set categories
-    do_Cats_Rules (inFile=obj.outFile, rules=obj.cats)
+    do_Cats_Rules (inFile=outFile, rules=obj.cats)
     
     
 
