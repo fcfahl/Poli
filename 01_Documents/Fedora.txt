@@ -57,26 +57,22 @@ e - Install plugins
 
 ################ Node
 
+
+cd ...
+
 	sudo dnf install nodejs
 	sudo dnf install ruby
 	sudo gem install 'sass'
 
-	#install modules automatically
-	cd .. (same folder to the package.json file)
-	
-	npm install --production
-
-	and after do manually:
-
-	npm install pug gulp gulp-cli gulp-cache gulp-ruby-sass gulp-util gulp-uglify gulp-watch gulp-imagemin gulp-sass install jshint gulp-jshint jshint-stylish node-sass browser-sync run-sequence gulp-cssnano gulp-connect gulp-usemin  gulp-rev gulp-clean  gulp-data  gulp-jade gulp-merge-json flickrapi 
 
 	sudo npm install -g pug gulp gulp-cli gulp-cache gulp-ruby-sass gulp-util gulp-uglify gulp-watch gulp-imagemin gulp-sass install jshint gulp-jshint jshint-stylish node-sass browser-sync run-sequence gulp-cssnano gulp-connect gulp-usemin  gulp-rev gulp-clean  gulp-data  gulp-jade gulp-merge-json flickrapi 
 
 
+	sudo npm link pug gulp gulp-cli gulp-cache gulp-ruby-sass gulp-util gulp-uglify gulp-watch gulp-imagemin gulp-sass install jshint gulp-jshint jshint-stylish node-sass browser-sync run-sequence gulp-cssnano gulp-connect gulp-usemin  gulp-rev gulp-clean  gulp-data  gulp-jade gulp-merge-json flickrapi 
 
 	edit the file: /home/fcfahl/.bash_profile
 
-	export NODE_PATH=/home/fcfahl/WebGIS_LULC/node_modules
+	export NODE_PATH=/usr/lib/node_modules
 
 
 
