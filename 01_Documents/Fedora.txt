@@ -77,5 +77,39 @@ cd ...
 
 
 
+################ PostGIS
+https://fedoramagazine.org/postgresql-quick-start-fedora-24/
+http://www.postgresonline.com/journal/archives/362-An-almost-idiots-guide-to-install-PostgreSQL-9.5,-PostGIS-2.2-and-pgRouting-2.1.0-with-Yum.html
+http://www.hackthesec.co.in/2016/01/how-to-install-postgresql-95-on.html
+
+sudo passwd postgres
+rosana40
+
+
+INIT
+sudo postgresql-setup --initdb
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+SET PWD
+
+su - postgres
+psql
+\password postgres
+rosana40
+
+CREATE USER
+
+createuser fcfahl 
+createdb db
+
+EDIT pg_hba.conf
+su 
+gedit /var/lib/pgsql/data/pg_hba.conf
+local   all             all                                     md5
+host    all             all             127.0.0.1/32            md5
+
+sudo systemctl restart postgresql
+
 
 
