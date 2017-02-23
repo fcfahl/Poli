@@ -19,3 +19,6 @@
 **/04_GRASS/**
 **/98_Backups
 **/TMP
+
+# python files
+*.pyc
