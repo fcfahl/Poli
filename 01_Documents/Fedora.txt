@@ -52,8 +52,9 @@ http://localhost:8080/manager/html
 
 
 e - Install plugins
-/usr/share/tomcat/webapps/manager/WEB-INF/lib
+/usr/share/tomcat/webapps/geoserver/WEB-INF/lib
 
+sudo systemctl restart  tomcat.service
 
 ################ Node
 
