@@ -118,5 +118,8 @@ host    all             all             ::1/128                 md5
 
 sudo systemctl restart postgresql
 
+################ LATEX
+
+sudo dnf install texlive texmaker
 
 
