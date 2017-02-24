@@ -50,7 +50,7 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
 
         out_Proj = 'EPSG:' + proj
         projected = 'proj_' + proj + '_' + in_File
-        out_Name =  out_Dir + out_File + '_EPSG' + proj + '.tif'
+        out_Name =  in_Dir + out_File + '_EPSG' + proj + '.tif'
         clip_Vector = Europe[proj].inFile_Full
 
         #__________ reproject:
@@ -63,24 +63,19 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
         gdal_ADO (inFile=out_Name, overviews=overviews)
         
         
-def clean_Files(in_Dir):  
-    
-    # __________ change directory:
-    os.chdir(in_Dir)    
+        os.remove(projected)
         
-    # __________ list of files:   
-    for f in [f for f in os.listdir(".") if not f.endswith(".7z") and (f.endswith(".tif"))]:
-    
-        # __________ remove hdf files:        
-        print (f)
-#        os.remove(f)
+    os.remove(fixed)   
+    os.remove(in_Clip)   
+    os.remove(in_File)
+        
         
         
 
 if __name__ == "__main__":       
      
     
-    for year in [2005, 2010]:
+    for year in [2010]:
 #    for year in [2000, 2005, 2010]:
         
         index = str(year)
@@ -95,9 +90,7 @@ if __name__ == "__main__":
                 
         
         
-
-
 #        decompress_Files(in_Dir, in_File)
-        fix_GeoTIFF(in_Dir, in_File)
+#        fix_GeoTIFF(in_Dir, in_File)
         reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution)
-#        clean_Files(in_Dir)
+

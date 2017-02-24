@@ -105,7 +105,7 @@ def set_Projection (inFile, inProj):
 
 #    print ('gdal_edit.py -a_srs %s %s ' %(inProj, inFile))
 
-    os.system('gdal_edit -a_srs %s %s ' %(inProj, inFile))
+    os.system('gdal_edit.py -a_srs %s %s ' %(inProj, inFile))
 
 
 def convert_Geotiff (inProj, inFile, outFile):
@@ -128,7 +128,7 @@ def convert_Geotiff (inProj, inFile, outFile):
 
 def gdal_Translate (inFile, outFile, format, noData, compression=''):
 
-    message ('gdal_translate ', inFile)
+#    message ('gdal_translate ', inFile)
 
     os.system('gdal_translate -a_nodata %s -co compress=%s -of "%s" %s %s ' %(noData, compression, format, inFile, outFile))
 
@@ -272,7 +272,7 @@ def gdal_Add_Color (inFile, colorTable, categories, compression=''):
 
 # __________ initialize LOG
 log_Dir = data_Process + '/98_LOGs'
-#    os.remove(log_Dir + 'GDAL_process.log')
+#os.remove(log_Dir + 'GDAL_process.log')
 initialize_Log(log_Dir, 'GDAL_process')
 
 info('______________________________________')

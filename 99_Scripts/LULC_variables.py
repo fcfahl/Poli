@@ -16,7 +16,7 @@ data_Process =  home + '03_Data_Processing/'
 data_GRASS =  home + '04_GRASS_Database/'
 data_Script =  home + '99_Scripts/'
 data_LULC =  '02_LULC/'
-data_Color =  data_Process + '99_Color_Rules/'
+data_Color =  data_Source + '99_Color_Rules/'
 
 
 MODIS_script_generator = 'https://lpdaac.usgs.gov/data_access/daac2disk'

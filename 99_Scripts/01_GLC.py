@@ -31,11 +31,13 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
         out_Proj = 'EPSG:' + proj
         in_Clip = in_File
         projected = 'proj_' + proj + '_' + in_File
-        out_Name =  out_Dir + out_File + '_EPSG' + proj + '.tif'
+        out_Name =  in_Dir + out_File + '_EPSG' + proj + '.tif'
         clip_Vector = Europe[proj].inFile_Full
+        
+        print out_Name
    
         #__________ reproject:
-        reproject_File (inFile=in_Clip, outFile=projected, inProj=in_Proj, outProj=out_Proj, res=resolution, compression=compression)
+#        reproject_File (inFile=in_Clip, outFile=projected, inProj=in_Proj, outProj=out_Proj, res=resolution, compression=compression)
 
         # __________ clip
         clip_File (inFile=projected, outFile=out_Name, vectorFile=clip_Vector, block=block_Size, compression=compression, noData=noData)
@@ -63,7 +65,7 @@ if __name__ == "__main__":
     resolution= GLC_2000['2000'].resolution    
 
 
-    decompress_Files(in_Dir, in_File='EUv2_Binary.zip')
-    reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution)
+#    decompress_Files(in_Dir, in_File='EUv2_Binary.zip')
+#    reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution)
     clean_Files(in_Dir + 'Binary/')
 

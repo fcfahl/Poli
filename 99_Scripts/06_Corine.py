@@ -18,6 +18,19 @@ def decompress_Files(year, in_Dir, in_File):
 
     # __________ decompress files:
     decompress_File (inDir = in_Dir, inFile = in_Name)
+    
+        # __________ clean folder    
+    files = os.listdir(".")
+    
+    for f in files:
+        if f.endswith(".zip"):
+            print f
+        elif  f.endswith(".pdf") or f.endswith(".dbf") or f.endswith(".xml") or f.endswith(".aux") or f.endswith(".dbf") or f.endswith(".txt") :                
+                
+            os.remove(f)
+            
+            # __________ remove folder:
+            shutil.rmtree(in_Dir + 'Legend', ignore_errors = True)
 
 
 def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution):
@@ -25,12 +38,13 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
     # __________ change directory:
     os.chdir(in_Dir)
 
-    for proj in ['3035', '3857']:
+    for proj in ['3857']:
+#    for proj in ['3035', '3857']:
 
         out_Proj = 'EPSG:' + proj
         in_Clip = in_File + '.tif'
         projected = 'proj_' + proj + '_' + in_File
-        out_Name =  out_Dir + out_File + '_EPSG' + proj + '.tif'
+        out_Name =  in_Dir + out_File + '_EPSG' + proj + '.tif'
         clip_Vector = Europe[proj].inFile_Full
 
         #__________ set Corine projection
@@ -47,30 +61,20 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
 
         # __________ overview
         gdal_ADO (inFile=out_Name, overviews=overviews)
+        
+        
+        os.remove(projected)    
+    os.remove(in_Clip)   
+    os.remove(in_File)
 
-
-def clean_Files(in_Dir):
-
-    # __________ change directory:
-    os.chdir(in_Dir)
-
-    # __________ remove folder:
-    shutil.rmtree(in_Dir + 'Legend', ignore_errors = True)
-
-    # __________ list of files:
-    for f in [f for f in os.listdir(".") if not f.endswith(".zip") and (f.endswith(".tif") or f.endswith(".dbf") or f.endswith(".xls") or f.endswith(".aux") or f.endswith(".tfw") or f.endswith(".doc") or f.endswith(".txt") or f.endswith(".pdf") or f.endswith(".xml") or f.endswith(".dsr"))]:
-
-        # __________ remove files:
-        print (f)
-        os.remove(f)
 
 
 
 if __name__ == "__main__":
 
 
-    for year in [2012, 2006, 2000, 1990]:
-#    for year in [2012]:
+#    for year in [2012, 2006, 2000, 1990]:
+    for year in [2012]:
 
         index = str(year)
 
@@ -82,8 +86,8 @@ if __name__ == "__main__":
         noData= Corine[index].noData
         resolution= Corine[index].resolution
 
-#        decompress_Files(year, in_Dir, in_File)
+        decompress_Files(year, in_Dir, in_File)
         reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution)
-#        clean_Files(in_Dir)
+
 
 

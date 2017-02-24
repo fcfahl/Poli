@@ -8,14 +8,14 @@ from LULC_variables import *
 from gdal_functions import *   
 
     
-def create_Folders(in_Dir, out_Dir):
+def create_Folders(hdf_Dir, out_Dir):
 
     # __________ create folder if it does not exist
-    if not os.path.exists(in_Dir):
-        os.makedirs(in_Dir)
-        
     if not os.path.exists(out_Dir):
         os.makedirs(out_Dir)
+        
+    if not os.path.exists(hdf_Dir):
+        os.makedirs(hdf_Dir)
 
 
 def get_Granules(in_Dir, in_File, df, year):
@@ -28,6 +28,8 @@ def get_Granules(in_Dir, in_File, df, year):
 
     # __________ export csv
     df2.to_csv(in_File, sep=',', header=True, index=False, columns=['URLs'])
+    
+    
     
     
 def download_MODIS(index, in_Dir, in_File):
@@ -75,6 +77,7 @@ def download_MODIS(index, in_Dir, in_File):
     wr = csv.writer(out_CSV, delimiter='\n')
 
     wr.writerow(MODIS[index].list_TMP) 
+    
     
 def decompress_Files(in_Dir):  
     
@@ -182,7 +185,7 @@ def clean_Files(in_Dir):
     os.chdir(in_Dir)
 
     # __________ delete tif files:
-    filelist = [ f for f in os.listdir(".") if f.endswith(".tif") or f.endswith(".vrt") or f.endswith(".xml")  ]
+    filelist = [ f for f in os.listdir(".") if f.endswith(".tif") or f.endswith(".vrt") or f.endswith(".xml") or f.endswith(".hdf")  ]
     
     for f in filelist:
         print 'remove file -> %s' % (f)
@@ -240,8 +243,8 @@ if __name__ == "__main__":
     
     # __________ time range    
     first_Year = 2001
-    last_Year = 2013
-#    last_Year = 2002        
+#    last_Year = 2013
+    last_Year = 2002        
     
     for year in xrange(first_Year, last_Year, 1):
         
@@ -250,17 +253,20 @@ if __name__ == "__main__":
         in_Dir = MODIS[index].inDir         
         in_File = MODIS[index].inFile 
         out_Dir= MODIS[index].outDir 
-        out_File= MODIS[index].outFile    
+        out_File= MODIS[index].outFile  
+                
+        hdf_Dir = in_Dir + '/hdf_files'
+        
         in_Proj= MODIS[index].projection    
         noData= MODIS[index].noData    
         resolution= MODIS[index].resolution      
 
-#        create_Folders(in_Dir, out_Dir)
-#        get_Granules(in_Dir, in_File, df, year)
-#        download_MODIS(index, in_Dir, in_File)
-#        decompress_Files(in_Dir)
-#        convert_GeoTIFF(index, in_Dir, in_File, noData, resolution)
-#        merge_GeoTIFF(index, in_Dir, in_File, noData, resolution)
-        reproject_GeoTIFF(index, in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution)
-#        clean_Files(in_Dir)
-#        compact_Files(in_Dir)
+#        create_Folders(hdf_Dir, out_Dir)
+#        get_Granules(hdf_Dir, in_File, df, year)
+#        download_MODIS(index, hdf_Dir, in_File)
+#        decompress_Files(hdf_Dir)
+#        convert_GeoTIFF(index, hdf_Dir, in_File, noData, resolution)
+#        merge_GeoTIFF(index, hdf_Dir, in_File, noData, resolution)
+#        reproject_GeoTIFF(index, hdf_Dir, in_File, in_Dir, out_File, in_Proj, noData, resolution)
+        clean_Files(hdf_Dir)
+#        compact_Files(hdf_Dir)

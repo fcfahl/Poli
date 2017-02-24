@@ -14,10 +14,23 @@ from gdal_functions import *
 def decompress_Files(in_Dir, in_File):  
         
     # __________ change directory:
-    os.chdir(in_Dir)    
+    os.chdir(in_Dir)       
+  
     
     # __________ decompress files:
     decompress_File (inDir = in_Dir, inFile = in_File)
+    
+    # __________ clean folder    
+    files = os.listdir(".")
+    
+    for f in files:
+        if f.endswith(".zip"):
+            print f
+        elif  f.endswith(".dbf") or f.endswith(".xls") or f.endswith(".avl") or f.endswith(".dsl") \
+            or f.endswith(".lyr") or f.endswith(".jpg") or f.endswith(".pdf") or f.endswith(".xml") or f.endswith(".dsr") or f.endswith("_QL.tif"):                
+                
+            os.remove(f)
+
     
   
 def fix_GeoTIFF(in_Dir, in_File): 
@@ -52,8 +65,10 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
 
         out_Proj = 'EPSG:' + proj
         projected = 'proj_' + proj + '_' + in_File
-        out_Name =  out_Dir + out_File + '_EPSG' + proj + '.tif'
+        out_Name =  in_Dir + out_File + '_EPSG' + proj + '.tif'
         clip_Vector = Europe[proj].inFile_Full
+        
+        print out_Name
 
         #__________ reproject:
         reproject_File (inFile=in_Clip, outFile=projected, inProj=in_Proj, outProj=out_Proj, res=resolution, compression=compression)
@@ -63,20 +78,12 @@ def reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resol
 
         # __________ overview
         gdal_ADO (inFile=out_Name, overviews=overviews)
-     
+
         
+        os.remove(projected)
         
-def clean_Files(in_Dir):  
-    
-    # __________ change directory:
-    os.chdir(in_Dir)    
-        
-    # __________ list of files:   
-    for f in [f for f in os.listdir(".") if not f.endswith(".zip") and (f.endswith(".tif") or f.endswith(".dbf") or f.endswith(".xls") or f.endswith(".avl") or f.endswith(".dsl") or f.endswith(".lyr") or f.endswith(".jpg") or f.endswith(".pdf") or f.endswith(".xml") or f.endswith(".dsr"))]:
-    
-        # __________ remove files:        
-        print (f)
-        os.remove(f)
+    os.remove(in_Clip)   
+    os.remove(in_File)
         
         
 
@@ -101,10 +108,9 @@ if __name__ == "__main__":
             in_Zip = 'Globcover_V2.2_Global.zip'        
             
         elif year == 2009:
-            in_Zip = 'Globcover2009_V2.3_Global_.zip'        
-        
+            in_Zip = 'Globcover2009_V2.3_Global_.zip'                
 
 
-#        decompress_Files(in_Dir, in_File=in_Zip)
+        decompress_Files(in_Dir, in_File=in_Zip)
         reproject_GeoTIFF(in_Dir, in_File, out_Dir, out_File, in_Proj, noData, resolution)
-#        clean_Files(in_Dir)
+
