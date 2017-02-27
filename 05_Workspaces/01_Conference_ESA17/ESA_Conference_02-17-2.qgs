@@ -1,0 +1,768 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="2.14.3-Essen">
+  <title></title>
+  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+    <customproperties/>
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="GLC2000">
+      <customproperties/>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="GLC_2000_EPSG303520170224202025433" name="GLC_2000_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="GlobCover">
+      <customproperties/>
+      <layer-tree-layer expanded="0" checked="Qt::Checked" id="GlobCover_2009_EPSG303520170224202045683" name="GlobCover_2009_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="MODIS">
+      <customproperties/>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="MODIS_2012_Type1_EPSG303520170224210712366" name="MODIS_2012_Type1_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="MODIS_2012_Type2_EPSG303520170224210819650" name="MODIS_2012_Type2_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="MODIS_2012_Type3_EPSG303520170224210750545" name="MODIS_2012_Type3_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="MODIS_2012_Type4_EPSG303520170224210751787" name="MODIS_2012_Type4_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="MODIS_2012_Type5_EPSG303520170224210752736" name="MODIS_2012_Type5_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="ESA">
+      <customproperties/>
+      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="ESA_2010_EPSG303520170224210649472" name="ESA_2010_EPSG3035">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="Corine">
+      <customproperties/>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="GLand30">
+      <customproperties/>
+    </layer-tree-group>
+  </layer-tree-group>
+  <relations/>
+  <mapcanvas>
+    <units>meters</units>
+    <extent>
+      <xmin>777455.54416802525520325</xmin>
+      <ymin>816171.98668537568300962</ymin>
+      <xmax>7769378.78932961635291576</xmax>
+      <ymax>6086586.81669633556157351</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <projections>0</projections>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+        <srsid>1000</srsid>
+        <srid>3035</srid>
+        <authid>EPSG:3035</authid>
+        <description>ETRS89 / ETRS-LAEA</description>
+        <projectionacronym>laea</projectionacronym>
+        <ellipsoidacronym>GRS80</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+    <layer_coordinate_transform_info/>
+  </mapcanvas>
+  <layer-tree-canvas>
+    <custom-order enabled="0">
+      <item>GLC_2000_EPSG303520170224202025433</item>
+      <item>GlobCover_2009_EPSG303520170224202045683</item>
+      <item>ESA_2010_EPSG303520170224210649472</item>
+      <item>MODIS_2012_Type1_EPSG303520170224210712366</item>
+      <item>MODIS_2012_Type3_EPSG303520170224210750545</item>
+      <item>MODIS_2012_Type4_EPSG303520170224210751787</item>
+      <item>MODIS_2012_Type5_EPSG303520170224210752736</item>
+      <item>MODIS_2012_Type2_EPSG303520170224210819650</item>
+    </custom-order>
+  </layer-tree-canvas>
+  <legend updateDrawingOrder="true">
+    <legendgroup open="true" checked="Qt::Unchecked" name="GLC2000">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GLC_2000_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="GLC_2000_EPSG303520170224202025433" visible="0"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="true" checked="Qt::Checked" name="GlobCover">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="GlobCover_2009_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="GlobCover_2009_EPSG303520170224202045683" visible="1"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="true" checked="Qt::Unchecked" name="MODIS">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="MODIS_2012_Type1_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MODIS_2012_Type1_EPSG303520170224210712366" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="MODIS_2012_Type2_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MODIS_2012_Type2_EPSG303520170224210819650" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="MODIS_2012_Type3_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MODIS_2012_Type3_EPSG303520170224210750545" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="MODIS_2012_Type4_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MODIS_2012_Type4_EPSG303520170224210751787" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="MODIS_2012_Type5_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MODIS_2012_Type5_EPSG303520170224210752736" visible="0"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="true" checked="Qt::Unchecked" name="ESA">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="ESA_2010_EPSG3035" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="ESA_2010_EPSG303520170224210649472" visible="0"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="true" checked="Qt::Checked" name="Corine"/>
+    <legendgroup open="true" checked="Qt::Checked" name="GLand30"/>
+  </legend>
+  <Composer title="GlobCover" visible="0">
+    <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" alignmentSnap="1" printResolution="600" paperWidth="350" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="5" printAsRaster="0" generateWorldFile="0" paperHeight="340" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
+      <symbol alpha="1" clip_to_extent="1" type="fill" name="">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="color" v="255,255,255,255"/>
+          <prop k="joinstyle" v="miter"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
+        </layer>
+      </symbol>
+      <ComposerMap mapRotation="0" keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+        <Extent ymin="1285759.57058820035308599" xmin="2547862.97980046179145575" ymax="6241614.92421460151672363" xmax="7649478.78500411007553339"/>
+        <LayerSet/>
+        <Grid/>
+        <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{28a53d8b-f0c6-43ef-8b05-2901db7a525d}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" annotationExpression="" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grid 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+          <lineStyle>
+            <symbol alpha="1" clip_to_extent="1" type="line" name="">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="0,0,0,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
+          </lineStyle>
+          <markerStyle>
+            <symbol alpha="1" clip_to_extent="1" type="marker" name="">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="name" v="circle"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0"/>
+                <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="diameter"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </markerStyle>
+          <annotationFontProperties description="Cantarell,10,-1,5,50,0,0,0,0,0" style=""/>
+        </ComposerMapGrid>
+        <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
+        <ComposerItem pagey="0" page="1" id="" lastValidViewScaleFactor="2.88918" positionMode="0" positionLock="false" x="0" y="0" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="350" outlineWidth="0.3" excludeFromExports="0" uuid="{c3bec65f-488c-41b6-b769-665b78829e3b}" height="340" itemRotation="0" frame="false" pagex="0">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerMap>
+      <customproperties>
+        <property key="imageCropMarginBottom" value="0"/>
+        <property key="imageCropMarginLeft" value="0"/>
+        <property key="imageCropMarginRight" value="0"/>
+        <property key="imageCropMarginTop" value="0"/>
+        <property key="imageCropToContents" value="false"/>
+      </customproperties>
+    </Composition>
+  </Composer>
+  <projectlayers>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>ESA_2010_EPSG303520170224210649472</id>
+      <datasource>../../02_Data_Sources/02_LULC/04_ESA/2010/ESA_2010_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>ESA_2010_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="172" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="16" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="0" label="No data" color="#000000"/>
+              <item alpha="255" value="10" label="Cropland; rainfed" color="#ffff64"/>
+              <item alpha="255" value="11" label="Herbaceous cover" color="#ffff64"/>
+              <item alpha="255" value="12" label="Tree or shrub cover" color="#ffff00"/>
+              <item alpha="255" value="20" label="Cropland; irrigated or post-flooding" color="#aaf0f0"/>
+              <item alpha="255" value="30" label="Mosaic cropland (>50%) / natural vegetation (tree; shrub; herbaceous cover) (&lt;50%)" color="#dcf064"/>
+              <item alpha="255" value="40" label="Mosaic natural vegetation (tree; shrub; herbaceous cover) (>50%) / cropland (&lt;50%) " color="#c8c864"/>
+              <item alpha="255" value="50" label="Tree cover; broadleaved; evergreen; closed to open (>15%)" color="#006400"/>
+              <item alpha="255" value="60" label="Tree cover; broadleaved; deciduous; closed to open (>15%)" color="#00a000"/>
+              <item alpha="255" value="61" label="Tree cover; broadleaved; deciduous; closed (>40%)" color="#00a000"/>
+              <item alpha="255" value="62" label="Tree cover; broadleaved; deciduous; open (15-40%)" color="#aac800"/>
+              <item alpha="255" value="70" label="Tree cover; needleleaved; evergreen; closed to open (>15%)" color="#003c00"/>
+              <item alpha="255" value="71" label="Tree cover; needleleaved; evergreen; closed (>40%)" color="#003c00"/>
+              <item alpha="255" value="72" label="Tree cover; needleleaved; evergreen; open (15-40%)" color="#005000"/>
+              <item alpha="255" value="80" label="Tree cover; needleleaved; deciduous; closed to open (>15%)" color="#285000"/>
+              <item alpha="255" value="81" label="Tree cover; needleleaved; deciduous; closed (>40%)" color="#285000"/>
+              <item alpha="255" value="82" label="Tree cover; needleleaved; deciduous; open (15-40%)" color="#286400"/>
+              <item alpha="255" value="90" label="Tree cover; mixed leaf type (broadleaved and needleleaved)" color="#788200"/>
+              <item alpha="255" value="100" label="Mosaic tree and shrub (>50%) / herbaceous cover (&lt;50%)" color="#8ca000"/>
+              <item alpha="255" value="110" label="Mosaic herbaceous cover (>50%) / tree and shrub (&lt;50%)" color="#be9600"/>
+              <item alpha="255" value="120" label="Shrubland" color="#966400"/>
+              <item alpha="255" value="121" label="Shrubland evergreen" color="#784b00"/>
+              <item alpha="255" value="122" label="Shrubland deciduous" color="#966400"/>
+              <item alpha="255" value="130" label="Grassland" color="#ffb432"/>
+              <item alpha="255" value="140" label="Lichens and mosses" color="#ffdcd2"/>
+              <item alpha="255" value="150" label="Sparse vegetation (tree; shrub; herbaceous cover) (&lt;15%)" color="#ffebaf"/>
+              <item alpha="255" value="152" label="Sparse shrub (&lt;15%)" color="#ffd278"/>
+              <item alpha="255" value="153" label="Sparse herbaceous cover (&lt;15%)" color="#ffebaf"/>
+              <item alpha="255" value="160" label="Tree cover; flooded; fresh or brakish water" color="#00785a"/>
+              <item alpha="255" value="170" label="Tree cover; flooded; saline water" color="#009678"/>
+              <item alpha="255" value="180" label="Shrub or herbaceous cover; flooded; fresh/saline/brakish water" color="#00dc82"/>
+              <item alpha="255" value="190" label="Urban areas" color="#c31400"/>
+              <item alpha="255" value="200" label="Bare areas" color="#fff5d7"/>
+              <item alpha="255" value="201" label="Consolidated bare areas" color="#dcdcdc"/>
+              <item alpha="255" value="202" label="Unconsolidated bare areas" color="#fff5d7"/>
+              <item alpha="255" value="210" label="Water bodies" color="#0046c8"/>
+              <item alpha="255" value="220" label="Permanent snow and ice" color="#ffffff"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>GLC_2000_EPSG303520170224202025433</id>
+      <datasource>../../02_Data_Sources/02_LULC/01_GLC/2000/GLC_2000_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GLC_2000_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="23" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="2" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="1" label="Tree Cover; broadleaved; evergreen" color="#006300"/>
+              <item alpha="255" value="2" label="Tree Cover; broadleaved; deciduous; closed" color="#009600"/>
+              <item alpha="255" value="3" label="Tree Cover; broadleaved; deciduous; open" color="#afff63"/>
+              <item alpha="255" value="4" label="Tree Cover; needle-leaved; evergreen" color="#8c4411"/>
+              <item alpha="255" value="5" label="Tree Cover; needle-leaved; deciduous" color="#cc7f60"/>
+              <item alpha="255" value="6" label="Tree Cover; mixed leaf type" color="#8cbf00"/>
+              <item alpha="255" value="7" label="Tree Cover; regularly flooded; fresh water" color="#7796ff"/>
+              <item alpha="255" value="8" label="Tree Cover; regularly flooded; saline water" color="#0047c6"/>
+              <item alpha="255" value="9" label="Mosaic: Tree Cover / Other natural vegetation" color="#00e500"/>
+              <item alpha="255" value="10" label="Tree Cover; burnt" color="#000000"/>
+              <item alpha="255" value="11" label="Shrub Cover; closed-open; evergreen" color="#ff7700"/>
+              <item alpha="255" value="12" label="Shrub Cover; closed-open; deciduous" color="#ffb200"/>
+              <item alpha="255" value="13" label="Herbaceous Cover; closed-open" color="#ffea9e"/>
+              <item alpha="255" value="14" label="Sparse herbaceous or sparse shrub cover" color="#ddc9a0"/>
+              <item alpha="255" value="15" label="Regularly flooded shrub and/or herbaceous cover" color="#009696"/>
+              <item alpha="255" value="16" label="Cultivated and managed areas" color="#ffe0e5"/>
+              <item alpha="255" value="17" label="Mosaic: Cropland / Tree Cover / Other natural vegetation" color="#ff75e8"/>
+              <item alpha="255" value="18" label="Mosaic: Cropland / Shrub and/or grass cover" color="#c989ff"/>
+              <item alpha="255" value="19" label="Bare Areas" color="#b5b5b5"/>
+              <item alpha="255" value="20" label="Water Bodies" color="#89e2ff"/>
+              <item alpha="255" value="21" label="Snow and Ice" color="#efefef"/>
+              <item alpha="255" value="22" label="Artificial surfaces and associated areas" color="#ff0000"/>
+              <item alpha="255" value="23" label="Irrigated Agriculture" color="#ffb7c1"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>GlobCover_2009_EPSG303520170224202045683</id>
+      <datasource>../../02_Data_Sources/02_LULC/02_GlobCover/2009/GlobCover_2009_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GlobCover_2009_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="166" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="19" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="11" label="Post-flooding or irrigated croplands (or aquatic)" color="#aaf0f0"/>
+              <item alpha="255" value="14" label="Rainfed croplands" color="#ffff64"/>
+              <item alpha="255" value="20" label="Mosaic cropland (50-70%) / vegetation (grassland/shrubland/forest) (20-50%)" color="#dcf064"/>
+              <item alpha="255" value="30" label="Mosaic vegetation (grassland/shrubland/forest) (50-70%) / cropland (20-50%) " color="#cdcd66"/>
+              <item alpha="255" value="40" label="Closed to open (>15%) broadleaved evergreen or semi-deciduous forest (>5m)" color="#006400"/>
+              <item alpha="255" value="50" label="Closed (>40%) broadleaved deciduous forest (>5m)" color="#00a000"/>
+              <item alpha="255" value="60" label="Open (15-40%) broadleaved deciduous forest/woodland (>5m)" color="#aac800"/>
+              <item alpha="255" value="70" label="Closed (>40%) needleleaved evergreen forest (>5m)" color="#003c00"/>
+              <item alpha="255" value="90" label="Open (15-40%) needleleaved deciduous or evergreen forest (>5m)" color="#286400"/>
+              <item alpha="255" value="100" label="Closed to open (>15%) mixed broadleaved and needleleaved forest (>5m)" color="#788200"/>
+              <item alpha="255" value="110" label="Mosaic forest or shrubland (50-70%) / grassland (20-50%)" color="#8ca000"/>
+              <item alpha="255" value="120" label="Mosaic grassland (50-70%) / forest or shrubland (20-50%) " color="#be9600"/>
+              <item alpha="255" value="130" label="Closed to open (>15%) (broadleaved or needleleaved; evergreen or deciduous) shrubland (&lt;5m)" color="#966400"/>
+              <item alpha="255" value="140" label="Closed to open (>15%) herbaceous vegetation (grassland; savannas or lichens/mosses)" color="#ffb432"/>
+              <item alpha="255" value="150" label="Sparse (&lt;15%) vegetation" color="#ffebaf"/>
+              <item alpha="255" value="160" label="Closed to open (>15%) broadleaved forest regularly flooded (semi-permanently or temporarily) - Fresh or brackish water" color="#00785a"/>
+              <item alpha="255" value="170" label="Closed (>40%) broadleaved forest or shrubland permanently flooded - Saline or brackish water" color="#009678"/>
+              <item alpha="255" value="180" label="Closed to open (>15%) grassland or woody vegetation on regularly flooded or waterlogged soil - Fresh; brackish or saline water" color="#00dc82"/>
+              <item alpha="255" value="190" label="Artificial surfaces and associated areas (Urban areas >50%)" color="#c31400"/>
+              <item alpha="255" value="200" label="Bare areas" color="#fff5d7"/>
+              <item alpha="255" value="210" label="Water bodies" color="#0046c8"/>
+              <item alpha="255" value="220" label="Permanent snow and ice" color="#ffffff"/>
+              <item alpha="255" value="230" label="No data (burnt areas; clouds;…)" color="#000000"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>MODIS_2012_Type1_EPSG303520170224210712366</id>
+      <datasource>../../02_Data_Sources/02_LULC/03_MODIS/2012/MODIS_2012_Type1_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MODIS_2012_Type1_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="13" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="2" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="0" label="Water" color="#aaf0f0"/>
+              <item alpha="255" value="1" label="Evergreen Needleleaf forest" color="#ffff64"/>
+              <item alpha="255" value="2" label="Evergreen Broadleaf forest" color="#dcf064"/>
+              <item alpha="255" value="3" label="Deciduous Needleleaf forest" color="#cdcd66"/>
+              <item alpha="255" value="4" label="Deciduous Broadleaf forest" color="#006400"/>
+              <item alpha="255" value="5" label="Mixed forest" color="#00a000"/>
+              <item alpha="255" value="6" label="Closed shrublands" color="#aac800"/>
+              <item alpha="255" value="7" label="Open shrublands" color="#003c00"/>
+              <item alpha="255" value="8" label="Woody savannas" color="#286400"/>
+              <item alpha="255" value="9" label="Savannas" color="#788200"/>
+              <item alpha="255" value="10" label="Grasslands" color="#8ca000"/>
+              <item alpha="255" value="11" label="Permanent wetlands" color="#be9600"/>
+              <item alpha="255" value="12" label="Croplands" color="#966400"/>
+              <item alpha="255" value="13" label="Urban and built-up" color="#ffb432"/>
+              <item alpha="255" value="14" label="Cropland/Natural vegetation mosaic" color="#ffebaf"/>
+              <item alpha="255" value="15" label="Snow and ice" color="#00785a"/>
+              <item alpha="255" value="16" label="Barren or sparsely vegetated" color="#009678"/>
+              <item alpha="255" value="254" label="Unclassified" color="#00dc82"/>
+              <item alpha="255" value="255" label="Fill Value" color="#ffffff"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>MODIS_2012_Type2_EPSG303520170224210819650</id>
+      <datasource>../../02_Data_Sources/02_LULC/03_MODIS/2012/MODIS_2012_Type2_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MODIS_2012_Type2_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="12" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="2" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="INTERPOLATED" clip="0">
+              <item alpha="255" value="0" label="Water" color="#aaf0f0"/>
+              <item alpha="255" value="1" label="Evergreen Needleleaf forest" color="#ffff64"/>
+              <item alpha="255" value="2" label="Evergreen Broadleaf forest" color="#dcf064"/>
+              <item alpha="255" value="3" label="Deciduous Needleleaf forest" color="#cdcd66"/>
+              <item alpha="255" value="4" label="Deciduous Broadleaf forest" color="#006400"/>
+              <item alpha="255" value="5" label="Mixed forest" color="#00a000"/>
+              <item alpha="255" value="6" label="Closed shrublands" color="#aac800"/>
+              <item alpha="255" value="7" label="Open shrublands" color="#003c00"/>
+              <item alpha="255" value="8" label="Woody savannas" color="#286400"/>
+              <item alpha="255" value="9" label="Savannas" color="#788200"/>
+              <item alpha="255" value="10" label="Grasslands" color="#8ca000"/>
+              <item alpha="255" value="12" label="Croplands" color="#966400"/>
+              <item alpha="255" value="13" label="Urban and built-up" color="#ffb432"/>
+              <item alpha="255" value="16" label="Barren or sparsely vegetated" color="#009678"/>
+              <item alpha="255" value="254" label="Unclassified" color="#00dc82"/>
+              <item alpha="255" value="255" label="Fill Value" color="#ffffff"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>MODIS_2012_Type3_EPSG303520170224210750545</id>
+      <datasource>../../02_Data_Sources/02_LULC/03_MODIS/2012/MODIS_2012_Type3_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MODIS_2012_Type3_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="7" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="1" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="0" label="Water" color="#aaf0f0"/>
+              <item alpha="255" value="1" label="Grasses/Cereal crops" color="#ffff64"/>
+              <item alpha="255" value="2" label="Shrubs" color="#dcf064"/>
+              <item alpha="255" value="3" label="Broadleaf crops" color="#cdcd66"/>
+              <item alpha="255" value="4" label="Savanna" color="#006400"/>
+              <item alpha="255" value="5" label="Evergreen Broadleaf forest" color="#00a000"/>
+              <item alpha="255" value="6" label="Deciduous Broadleaf forest" color="#aac800"/>
+              <item alpha="255" value="7" label="Evergreen Needleleaf forest" color="#003c00"/>
+              <item alpha="255" value="8" label="Deciduous Needleleaf forest" color="#286400"/>
+              <item alpha="255" value="9" label="Non-vegetated" color="#788200"/>
+              <item alpha="255" value="10" label="Urban" color="#8ca000"/>
+              <item alpha="255" value="254" label="Unclassified" color="#00dc82"/>
+              <item alpha="255" value="255" label="Fill Value" color="#ffffff"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>MODIS_2012_Type4_EPSG303520170224210751787</id>
+      <datasource>../../02_Data_Sources/02_LULC/03_MODIS/2012/MODIS_2012_Type4_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MODIS_2012_Type4_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="6" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="0" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="0" label="Water" color="#aaf0f0"/>
+              <item alpha="255" value="1" label="Evergreen Needleleaf vegetation" color="#ffff64"/>
+              <item alpha="255" value="2" label="Evergreen Broadleaf vegetation" color="#dcf064"/>
+              <item alpha="255" value="3" label="Deciduous Needleleaf vegetation" color="#cdcd66"/>
+              <item alpha="255" value="4" label="Deciduous Broadleaf vegetation" color="#006400"/>
+              <item alpha="255" value="5" label="Annual Broadleaf vegetation" color="#00a000"/>
+              <item alpha="255" value="6" label="Annual grass vegetation" color="#aac800"/>
+              <item alpha="255" value="7" label="Non-vegetated land" color="#003c00"/>
+              <item alpha="255" value="8" label="Urban" color="#286400"/>
+              <item alpha="255" value="254" label="Unclassified" color="#00dc82"/>
+              <item alpha="255" value="255" label="Fill Value" color="#ffffff"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>MODIS_2012_Type5_EPSG303520170224210752736</id>
+      <datasource>../../02_Data_Sources/02_LULC/03_MODIS/2012/MODIS_2012_Type5_EPSG3035.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MODIS_2012_Type5_EPSG3035</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>1000</srsid>
+          <srid>3035</srid>
+          <authid>EPSG:3035</authid>
+          <description>ETRS89 / ETRS-LAEA</description>
+          <projectionacronym>laea</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" classificationMax="8" classificationMinMaxOrigin="CumulativeCutFullExtentEstimated" band="1" classificationMin="0" type="singlebandpseudocolor">
+          <rasterTransparency/>
+          <rastershader>
+            <colorrampshader colorRampType="DISCRETE" clip="0">
+              <item alpha="255" value="0" label="Water" color="#aaf0f0"/>
+              <item alpha="255" value="1" label="Evergreen Needleleaf trees" color="#ffff64"/>
+              <item alpha="255" value="2" label="Evergreen Broadleaf trees" color="#dcf064"/>
+              <item alpha="255" value="3" label="Deciduous Needleleaf trees" color="#cdcd66"/>
+              <item alpha="255" value="4" label="Deciduous Broadleaf trees" color="#006400"/>
+              <item alpha="255" value="5" label="Shrub" color="#00a000"/>
+              <item alpha="255" value="6" label="Grass" color="#aac800"/>
+              <item alpha="255" value="7" label="Cereal crops" color="#003c00"/>
+              <item alpha="255" value="8" label="Broad-leaf crops" color="#286400"/>
+              <item alpha="255" value="9" label="Urban and built-up" color="#788200"/>
+              <item alpha="255" value="10" label="Snow and ice" color="#8ca000"/>
+              <item alpha="255" value="11" label="Barren or sparse vegetation" color="#be9600"/>
+              <item alpha="255" value="254" label="Unclassified" color="#00dc82"/>
+              <item alpha="255" value="255" label="Fill Value" color="#ffffff"/>
+            </colorrampshader>
+          </rastershader>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+  </projectlayers>
+  <properties>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <SpatialRefSys>
+      <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+      <ProjectCRSID type="int">3452</ProjectCRSID>
+    </SpatialRefSys>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+    </Gui>
+    <Digitizing>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+      <LayerSnappingList type="QStringList"/>
+      <LayerSnappingEnabledList type="QStringList"/>
+      <SnappingMode type="QString">current_layer</SnappingMode>
+      <AvoidIntersectionsList type="QStringList"/>
+      <LayerSnappingToleranceUnitList type="QStringList"/>
+      <LayerSnapToList type="QStringList"/>
+      <DefaultSnapType type="QString">off</DefaultSnapType>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
+      <LayerSnappingToleranceList type="QStringList"/>
+    </Digitizing>
+    <PositionPrecision>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+    </PositionPrecision>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+  </properties>
+  <visibility-presets/>
+</qgis>
